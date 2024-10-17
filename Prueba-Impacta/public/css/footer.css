@@ -1,0 +1,140 @@
+footer {
+    background-color: #002244;
+    color: white;
+    padding: 40px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-column {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.footer-column h3 {
+    color: #e2001a;
+    margin-bottom: 20px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #e2001a;
+}
+
+.footer-column img {
+    max-width: 40px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.social-icons {
+    display: flex;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: white;
+    margin-right: 15px;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #e2001a;
+}
+
+.footer-logo {
+    text-align: right;
+}
+
+.footer-logo img {
+    margin-top: 100px;
+    transform: translateX(300%);
+    max-width: 150px;
+}
+
+.payment-methods {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Media Queries para hacerlo responsive */
+
+/* Pantallas pequeñas (teléfonos) */
+@media (max-width: 600px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 10px;
+    }
+
+    .footer-column {
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .footer-logo {
+        text-align: center;
+    }
+
+    .footer-logo img {
+        margin-top: 20px;
+        transform: translateX(0%);
+    }
+
+    .payment-methods {
+        justify-content: center;
+    }
+}
+
+/* Pantallas medianas (tablets) */
+@media (max-width: 900px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-column {
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .footer-logo {
+        text-align: center;
+    }
+
+    .footer-logo img {
+        margin-top: 50px;
+        transform: translateX(0%);
+    }
+
+    .payment-methods {
+        justify-content: center;
+    }
+}

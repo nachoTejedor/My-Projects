@@ -1,0 +1,152 @@
+.containerSelectForm {
+    background-color: #e2001a;
+    padding: 40px;
+    border-radius: 10px;
+    width: 600px;
+    max-width: 100%; /* Asegura que el contenedor no exceda el ancho de la pantalla */
+    margin: 0 auto; /* Centra el contenedor en pantallas pequeñas */
+}
+
+.containerSelectForm h3 {
+    margin-bottom: 20px;
+    font-weight: normal;
+    color: white;
+    font-size: 24px; /* Ajusta el tamaño del texto */
+    text-align: center; /* Centra el título */
+}
+
+.option-group {
+    margin-bottom: 20px;
+}
+
+.option-group input[type="radio"] {
+    display: none;
+}
+
+.option-group label {
+    display: flex;
+    align-items: center;
+    background-color: #c30018;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.option-group label:hover {
+    background-color: #b00014;
+}
+
+.option-group input[type="radio"]:checked + label {
+    background-color: #ffffff;
+    color: #e2001a;
+    border: 2px solid #e2001a;
+}
+
+.option-group label span {
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.5);
+}
+
+.checkbox-group label {
+    font-size: 14px;
+}
+
+.submit-btn {
+    background-color: #ffcc00;
+    color: #e2001a;
+    padding: 15px;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #ffdb4d;
+}
+
+/* Media Queries para Responsividad */
+
+/* Dispositivos móviles (pantallas pequeñas) */
+@media (max-width: 767px) {
+    .containerSelectForm {
+        width: 100%;
+        padding: 20px; /* Reduce el padding en pantallas pequeñas */
+    }
+
+    .containerSelectForm h3 {
+        font-size: 20px; /* Reduce el tamaño del título */
+    }
+
+    .option-group label {
+        padding: 10px; /* Reduce el padding en las opciones */
+        font-size: 14px; /* Reduce el tamaño de la fuente en las opciones */
+    }
+
+    .option-group label span {
+        font-size: 14px; /* Reduce el tamaño del texto de la opción */
+    }
+
+    .submit-btn {
+        padding: 10px; /* Reduce el padding del botón de envío */
+        font-size: 14px; /* Reduce el tamaño del texto del botón */
+    }
+}
+
+/* Tablets (pantallas medianas) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .containerSelectForm {
+        padding: 30px;
+        width: 80%; /* Ajusta el ancho en pantallas medianas */
+    }
+
+    .containerSelectForm h3 {
+        font-size: 22px; /* Ajusta el tamaño del título */
+    }
+
+    .option-group label {
+        padding: 12px; /* Ajusta el padding en las opciones */
+        font-size: 15px; /* Ajusta el tamaño de la fuente en las opciones */
+    }
+
+    .submit-btn {
+        padding: 12px; /* Ajusta el padding del botón de envío */
+        font-size: 15px; /* Ajusta el tamaño del texto del botón */
+    }
+}
+
+/* Desktop (pantallas grandes) */
+@media (min-width: 1025px) {
+    .containerSelectForm {
+        width: 100%; /* Mantiene el ancho original en pantallas grandes */
+        padding: 40px;
+    }
+
+    .containerSelectForm h3 {
+        font-size: 24px; /* Tamaño original del título */
+    }
+
+    .option-group label {
+        padding: 15px;
+        font-size: 16px; /* Tamaño original de la fuente en las opciones */
+    }
+
+    .submit-btn {
+        padding: 15px; /* Tamaño original del padding del botón */
+        font-size: 16px; /* Tamaño original del texto del botón */
+    }
+}

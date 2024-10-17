@@ -1,0 +1,154 @@
+@font-face {
+    font-family: 'Outfit';
+    src: url('/public/css/Outfit/Outfit-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'Outfit';
+    src: url('/public/css/Outfit/static/Outfit-Bold.ttf') format('truetype');
+    font-weight: bold;
+}
+body {
+    font-family: 'Outfit';
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+header {
+    background: #e2001a;
+    color: #fff;
+    padding-top: 20px;
+    min-height: 70px;
+    border-bottom: #fff 3px solid;
+    margin-bottom: 20px;
+}
+header h1 {
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+}
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+.slider {
+    height: 600px;
+    flex: 1;
+    position: relative;
+}
+.slider img {
+    max-width: 100%;
+    height: 600px;
+    border-radius: 10px;
+}
+.content {
+    flex: 1;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.content h2 {
+    font-size: 24px;
+    margin: 20px 0;
+}
+.content p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Media Queries para Responsividad */
+
+/* Dispositivos móviles (pantallas pequeñas) */
+@media (max-width: 767px) {
+    .header h1 {
+        font-size: 20px;
+        padding: 10px;
+    }
+    .main-content {
+        flex-direction: column; /* Cambia a disposición en columna */
+        padding: 10px;
+    }
+    .slider {
+        height: 300px; /* Reduce la altura del slider */
+    }
+    .slider img {
+        height: 300px; /* Ajusta la altura de la imagen */
+    }
+    .content {
+        padding: 15px;
+    }
+    .content h2 {
+        font-size: 20px; /* Reduce el tamaño de los encabezados */
+    }
+    .content p {
+        font-size: 16px; /* Ajusta el tamaño del texto */
+    }
+    footer p {
+        font-size: 12px; /* Reduce el tamaño del texto en el footer */
+    }
+}
+
+/* Tablets (pantallas medianas) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .main-content {
+        gap: 15px; /* Ajusta el espacio entre los elementos */
+        padding: 15px;
+    }
+    .slider {
+        height: 450px; /* Ajusta la altura del slider */
+    }
+    .slider img {
+        height: 450px; /* Ajusta la altura de la imagen */
+    }
+    .content h2 {
+        font-size: 22px; /* Ajusta el tamaño de los encabezados */
+    }
+    .content p {
+        font-size: 17px; /* Ajusta el tamaño del texto */
+    }
+    footer p {
+        font-size: 13px; /* Ajusta el tamaño del texto en el footer */
+    }
+}
+
+/* Desktop (pantallas grandes) */
+@media (min-width: 1025px) {
+    .main-content {
+        flex-wrap: nowrap; /* Mantiene la disposición en fila */
+        gap: 20px;
+        padding: 20px;
+    }
+    .slider {
+        height: 600px; /* Mantiene la altura original del slider */
+    }
+    .slider img {
+        height: 600px; /* Mantiene la altura original de la imagen */
+    }
+    .content h2 {
+        font-size: 24px; /* Mantiene el tamaño original de los encabezados */
+    }
+    .content p {
+        font-size: 18px; /* Mantiene el tamaño original del texto */
+    }
+    footer p {
+        font-size: 14px; /* Mantiene el tamaño original del texto en el footer */
+    }
+}
