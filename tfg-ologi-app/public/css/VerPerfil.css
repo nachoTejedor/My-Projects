@@ -1,0 +1,244 @@
+body{
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+    font-family: 'Bodoni', serif; /* Agregamos 'Bodoni' como la fuente principal y 'serif' como una fuente genérica de respaldo en caso de que 'Bodoni' no esté disponible */
+    background-image: url("../img/ologiHeader.jpg");
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+nav {
+    background: rgb(255, 255, 255);
+    color: #000000;
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.enlace {
+    padding: 20px 50px;
+}
+
+
+.enlace {
+    padding: 20px 50px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+nav ul li {
+    font-family: 'Bodoni', serif; /* Agregamos 'Bodoni' como la fuente principal y 'serif' como una fuente genérica de respaldo en caso de que 'Bodoni' no esté disponible */
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: #000000;
+    font-size: 18px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+li a.active, li a:hover {
+    background: #000000;
+    transition: background 0.5s, color 0.5s;
+    color: #ffffff;
+}
+
+
+.datos-usuario{
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    text-align: justify;
+    width: 400px;
+    margin-left: 0;
+    padding: 50px;
+    background: #ffffff;
+    border-radius: 5px;
+}
+.divImagen{
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+    width: 600px;
+    height: auto;
+    padding: 50px;
+    background: #ffffff;
+    box-shadow: 0 0 10px rgb(8, 8, 8);
+    border-radius: 5px;
+}
+footer {
+    margin-top: 60px;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin-left: 0;
+}
+.img {
+    border-radius: 50%;
+    align-self: center;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+.mensaje{
+    color: #fff;
+}
+.checkbtn{
+    font-size: 30px;
+    color: #000000;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+
+/* Media Queries */
+@media (max-width: 858px) {
+    .checkbtn {
+        display: block;
+        overflow-y: auto;
+    }
+
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    nav ul {
+        margin-left: 0px;
+        align-self: center;
+        justify-content: center;
+        align-items: center;
+        margin-right: 20px;
+    }
+
+    nav ul {
+        margin-left: 0;
+        flex-direction: column;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        flex-direction: column;
+        font-size: 20px;
+    }
+
+    li a:hover, li a.active {
+        background: none;
+        color: red;
+    }
+
+    #check:checked ~ ul {
+        left: 0;
+    }
+
+    .divImagen {
+        width: 100%; /* Cambiado para que se ajuste al ancho del contenedor padre */
+        padding: 0; /* Eliminado el padding */
+    }
+}
+
+@media (max-width: 768px) {
+    #traducir {
+        margin-left: 0;
+    }
+
+    .contenedorProductosTotales {
+        flex-direction: column;
+    }
+
+    .footer-section {
+        flex: 1 1 100%;
+    }
+
+    .newsletter {
+        flex: 1 1 100%;
+    }
+
+    .copyright {
+        margin-top: 0;
+    }
+
+    .divImagen {
+        width: 100%; /* Cambiado para que se ajuste al ancho del contenedor padre */
+        padding: 0; /* Eliminado el padding */
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        box-sizing: border-box;
+        margin-left: 0;
+    }
+
+    nav ul {
+        box-sizing: border-box;
+        flex-direction: column;
+    }
+
+    #traducir {
+        margin-left: 0;
+    }
+
+    .contenedorProductosTotales {
+        flex-direction: column;
+    }
+
+    .footer-section {
+        flex: 1 1 100%;
+    }
+
+    .newsletter {
+        flex: 1 1 100%;
+    }
+
+    .copyright {
+        margin-top: 0;
+    }
+    .datos-usuario{
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .divImagen {
+        width: 100%; /* Cambiado para que se ajuste al ancho del contenedor padre */
+        padding: 0; /* Eliminado el padding */
+        box-sizing: border-box;
+    }
+}

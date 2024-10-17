@@ -1,0 +1,71 @@
+body {
+    background-image: url(/img/ologiHeader.jpg);
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: sans-serif;
+    margin: 0; /* Elimina los márgenes predeterminados del cuerpo */
+}
+
+/* estilos.css */
+
+.container {
+    margin-top: 50px;
+}
+.text-center {
+    text-align: center;
+    color: #ffffff; /* Cambia el color del texto según tus preferencias */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra del texto */
+    font-size: 50px; /* Tamaño del texto */
+    margin: 20px 0; /* Margen superior e inferior para separar del contenido circundante */
+    padding: 10px; /* Relleno para espacio interno */
+    border-radius: 10px; /* Bordes redondeados */
+}
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #000; /* Color negro del botón */
+    color: #fff; /* Color del texto */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.center-button {
+    margin-left: 850px;
+    margin-top: 20px;
+}
+.back-button:hover {
+    background-color: #222; /* Cambio de color al pasar el ratón */
+}
+h1 {
+    color: #ffffff;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #f5f5f5; /* Fondo de la tabla */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+th, td {
+    border: 1px solid #dee2e6;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #333; /* Fondo del encabezado */
+    color: #fff; /* Color del texto en el encabezado */
+}
+
+tbody tr:hover {
+    background-color: #e0e0e0; /* Color de fondo al pasar el ratón */
+}
+
+/* Alternancia de colores de filas */
+tbody tr:nth-child(even) {
+    background-color: #f8f9fa; /* Color de fondo para filas pares */
+}

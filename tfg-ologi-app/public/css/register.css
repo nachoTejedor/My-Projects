@@ -1,0 +1,267 @@
+/* CSS para el formulario de registro */
+body {
+  background-image: url("../img/ologiHeader.jpg");
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+  padding-top: 100px;
+  box-sizing: border-box;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.registration-form {
+  text-align: center;
+}
+
+.registration-form h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.registration-form label {
+  display: block;
+  margin-bottom: 5px;
+  text-align: left;
+  color: #555;
+}
+
+.registration-form input[type="text"],
+.registration-form input[type="password"],
+.registration-form input[type="email"],
+.registration-form input[type="date"],
+.registration-form input[type="file"] {
+  width: calc(100% - 12px);
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.registration-form button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: darkblue;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.registration-form button[type="submit"]:hover {
+  background-color: rgb(6, 6, 44);
+}
+
+.registration-form a {
+  display: block;
+  margin-top: 15px;
+  text-decoration: none;
+  color: rgb(6, 6, 44);
+}
+
+.registration-form a:hover {
+  text-decoration: underline;
+}
+
+nav {
+  background: rgb(255, 255, 255);
+  color: #000000;
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.enlace {
+  padding: 20px 50px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+nav ul li {
+  font-family: 'Bodoni', serif; /* Agregamos 'Bodoni' como la fuente principal y 'serif' como una fuente genérica de respaldo en caso de que 'Bodoni' no esté disponible */
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+
+nav ul li a {
+  color: #000000;
+  font-size: 18px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+li a.active, li a:hover {
+  background: #000000;
+  transition: background 0.5s, color 0.5s;
+  color: #ffffff;
+}
+
+.checkbtn {
+  font-size: 30px;
+  color: #000000;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+/* Responsive styles */
+@media (max-width: 858px) {
+  .checkbtn {
+    display: block;
+    overflow-y: auto;
+  }
+
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #2c3e50;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+
+  nav ul {
+    margin-left: 0px;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    flex-direction: column;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+
+  nav ul li a {
+    flex-direction: column;
+    font-size: 20px;
+  }
+
+  li a.active, li a:hover {
+    background: none;
+    color: red;
+  }
+
+  #check:checked ~ ul {
+    left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .registration-form input[type="text"],
+  .registration-form input[type="password"],
+  .registration-form input[type="email"],
+  .registration-form input[type="date"],
+  .registration-form input[type="file"] {
+    width: calc(100% - 10px);
+    padding: 7px;
+    margin-bottom: 12px;
+    font-size: 14px;
+  }
+
+  .registration-form button[type="submit"] {
+    padding: 8px;
+    font-size: 16px;
+  }
+
+  .enlace {
+    padding: 10px 20px;
+  }
+
+  .divImagen {
+    width: 100%; /* Cambiado para que se ajuste al ancho del contenedor padre */
+    padding: 0; /* Eliminado el padding */
+  }
+
+  nav ul {
+    margin-left: 0;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 10px;
+    padding-top: 70px;
+  }
+
+  .registration-form h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+  }
+
+  .registration-form input[type="text"],
+  .registration-form input[type="password"],
+  .registration-form input[type="email"],
+  .registration-form input[type="date"],
+  .registration-form input[type="file"] {
+    width: calc(100% - 8px);
+    padding: 6px;
+    margin-bottom: 10px;
+    font-size: 12px;
+  }
+
+  .registration-form button[type="submit"] {
+    padding: 7px;
+    font-size: 14px;
+  }
+
+  .enlace {
+    padding: 5px 10px;
+  }
+
+  .checkbtn {
+    display: block;
+  }
+
+  nav ul {
+    box-sizing: border-box;
+    margin-left: 0;
+    flex-direction: column;
+  }
+}

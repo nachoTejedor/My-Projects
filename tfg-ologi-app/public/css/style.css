@@ -1,0 +1,768 @@
+body {
+    background-color: #000000;
+    font-family: 'Bodoni', serif; /* Agregamos 'Bodoni' como la fuente principal y 'serif' como una fuente genérica de respaldo en caso de que 'Bodoni' no esté disponible */
+
+}
+.pageOpacity {
+    opacity: 0; /* Inicialmente establece la opacidad en 0 */
+    transition: opacity 0.5s ease; /* Agrega una transición suave */
+}
+
+.visible {
+    opacity: 1; /* Cuando el contenido se vuelve visible, establece la opacidad en 1 */
+}
+@keyframes show {
+    from {
+        opacity: 0;
+        scale: 0%;	}
+
+    to {
+        opacity: 1;
+        scale: 100%;
+    }
+}
+
+.container {
+    view-timeline-name: --image;
+    view-timeline-axis: block;
+
+    animation-timeline: --image;
+    animation-name: show;
+
+    animation-range: entry 25% cover 30%;
+    animation-fill-mode: both;
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+/* Estilos para el icono de cerrar */
+.close-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: rgb(0, 0, 0); /* Color blanco */
+    cursor: pointer;
+    z-index: 1000; /* Asegura que esté por encima del contenido */
+}
+
+
+.imgheader{
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-position: absolute;
+    background-attachment: fixed;
+}
+/*ESTILOS LOGIN*/
+.container_login {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos para el contenedor interior del formulario */
+/* Estilos para el contenedor interior del formulario */
+.container_login .container {
+
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(223, 223, 223);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    height: 50%;
+    width: 100%; /* Ancho del contenedor del formulario */
+    max-width: 600px; /* Ancho máximo del contenedor del formulario */
+    margin: calc(50vh - 200px) auto 0; /* Calcula el margen superior para centrar verticalmente */
+}
+
+/* Estilos para el título del formulario */
+.container_login h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #000000;
+}
+.container_login label{
+    padding-bottom: 10px;
+    color: #000000;
+}
+
+.container_login input[type="text"],
+.container_login input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+}
+
+.container_login button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px; /* Añade espacio entre el último campo y el botón */
+    background-color: #000000;
+    color: white;
+    border: none;
+
+    cursor: pointer;
+}
+
+
+.container_login button[type="submit"]:hover {
+    background-color: #383838;
+}
+
+/* Estilos para el enlace de registro */
+.container_login a {
+    display: block;
+    text-align: center;
+    color: #000000;
+    margin-top: 10px;
+}
+
+.container_login a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+
+/* FIN ESTILOS LOGIN*/
+
+
+.enlace{
+    padding: 20px 50px;
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+}
+nav ul li{
+    text-decoration: bold;
+    font-family: 'Bodoni', serif; /* Agregamos 'Bodoni' como la fuente principal y 'serif' como una fuente genérica de respaldo en caso de que 'Bodoni' no esté disponible */
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    margin-left: 5px;
+    color: #fff;
+    font-size: 18px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+#traducir{
+    margin-left: 300px;
+}
+li a.active, li a:hover{
+    background: #fffdfd;
+    transition: .5s;
+    color: #000000;
+}
+
+.account-link {
+    position: relative;
+    margin-left: 350px;
+    color: #fff;
+    font-size: 24px;
+}
+.login-link {
+    margin-left: 0px;
+    color: #fff;
+    font-size: 24px;
+}
+
+.account-link:hover {
+    color: #000000;
+}
+
+.account-link:hover::after {
+    content: attr(data-text); /* Utiliza el atributo data-text para especificar el texto adicional */
+    position: absolute;
+    top: 100%; /* Mueve el texto debajo del botón */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0; /* Inicialmente oculta el texto */
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: opacity 0.3s ease; /* Agrega una transición suave */
+}
+
+
+.search-container input[type="text"] {
+    margin-left: 10px;
+    padding: 5px;
+    font-size: 16px;
+    width: 150px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+.search-container button[type="submit"] {
+    padding: 5px ;
+    background-color: #252780;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.search-container button[type="submit"]:hover {
+    background-color: #000000;
+    color: rgb(255, 255, 255)
+}
+
+nav {
+    position: absolute;
+    background: transparent;
+    height: 80px;
+    width: 100%;
+    z-index: 1;
+}
+.logo{
+    display: block;
+    margin-top: 10px;
+    margin-left: 400px;
+    width: 70px;
+    height: 70px;
+}
+.logo-Admin{
+    margin-top: 10px;
+    margin-left: 280px;
+    width: 70px;
+    height: 70px;
+}
+.logo:hover{
+    display: block;
+    cursor: pointer;
+}
+.logout-link {
+    display: block;
+    margin-left: 200px;
+    float: right;
+}
+.banner {
+    position: relative;
+    width: 100%;
+    height: calc(100vh );
+    background-color: #F5F5F5;
+    background-size: cover;
+    background-position: center;
+    transition: all .1s ease-out;
+    background-image: url('/img/ologiHeader.jpg');
+    overflow: hidden;
+}
+
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
+    animation: fadeBackground 10s infinite linear;
+}
+
+.banner-content {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    color: #FFF;
+    background-color: rgba(0, 22, 40, .6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+h1 {
+    font-family: 'Bodoni', serif; /* Agregamos 'Bodoni' como la fuente principal y 'serif' como una fuente genérica de respaldo en caso de que 'Bodoni' no esté disponible */
+    color: white;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 30px;
+    font-size: 40px;
+    text-align: center;
+}
+.banner-content h1 {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 30px;
+    font-size: 40px;
+    text-align: center;
+}
+
+.banner-content a {
+    text-decoration: none;
+    color: #FFF;
+    padding: 9px 20px;
+    border: 1px solid #FFF;
+    text-transform: uppercase;
+    transition: all .3s ease-in-out;
+}
+
+.banner-content a:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+@keyframes fadeBackground {
+    0% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+        background-image: url('/img/estudio.jpg');
+    }
+    75% {
+        opacity: 1;
+        background-image: url('/img/estudio.jpg');
+    }
+    98%, 100% {
+        opacity: 0;
+        background-image: url('/img/estudio.jpg');
+    }
+}
+
+.container__slider {
+    margin-bottom: 120px;
+    max-width: 1000px;
+    height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 10px;
+    margin: 0 auto; /* Centro horizontalmente */
+}
+
+.container{
+    width: 100%;
+    max-width: 800px;
+    height: 100%;
+    max-height: 600px;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container__slider .slider-button {
+    display: none;
+}
+input[type="radio"] {
+    display: none;
+}
+
+.cards{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.map{
+    margin-left: 450px;
+    width: 50%;
+    height: 700px;
+}
+.map iframe{
+    width: 100%;
+    height: 100%;
+}
+.card{
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    cursor: pointer;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+
+#item-2:checked ~ .cards #selector-1,
+#item-1:checked ~ .cards #selector-3,
+#item-3:checked ~ .cards #selector-2{
+    transform: translateX(-40%) scale(0.8);
+    opacity: 0.6;
+    z-index: 0;
+}
+
+#item-3:checked ~ .cards #selector-1,
+#item-1:checked ~ .cards #selector-2,
+#item-2:checked ~ .cards #selector-3{
+    transform: translateX(40%) scale(0.8);
+    opacity: 0.6;
+    z-index: 0;
+}
+
+#item-1:checked ~ .cards #selector-1,
+#item-2:checked ~ .cards #selector-2,
+#item-3:checked ~ .cards #selector-3{
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    transform: translateX(0) scale(1);
+    z-index: 1;
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+
+.tittleProductsContainer h1{
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 30px;
+    color: #000000; /* Color de texto negro para contraste */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+.tittleProductsContainerMain h1{
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+.product-slider {
+    background-color: #cccccc;
+    margin-bottom: 200px;
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 30px;
+    overflow: hidden;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap; /* Para que los productos se distribuyan en filas */
+    justify-content: center;
+    gap: 30px; /* Espacio entre los productos */
+    padding: 10px; /* Añadimos un pequeño espacio alrededor de los productos */
+}
+
+.products a {
+    width: 22%; /* Ancho de cada imagen para que se muestren 4 por fila */
+    object-fit: cover;
+    opacity: .8; /* Opacidad inicial más baja */
+    transition: width 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
+}
+
+.products a:hover {
+    cursor: pointer;
+    opacity: 1; /* Opacidad completa al pasar el ratón */
+    filter: contrast(80%);
+    transform: scale(1.1);
+}
+
+
+.prev-button,
+.next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.prev-button {
+    left: 10px;
+}
+
+.next-button {
+    right: 10px;
+}
+
+/* Ocultar las flechas cuando no hay desplazamiento */
+.prev-button.hidden,
+.next-button.hidden {
+    display: none;
+}
+
+footer p{
+    padding: 10px;
+}
+#footer{
+    position: absolute;
+}
+footer {
+    position: absolute;
+    width: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #000000;
+    color: #fff;
+    padding: 20px 0;
+}
+
+footer .container {
+    padding: 20px;
+
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    padding: 20px;
+    flex: 1 1 calc(25% - 20px);
+    margin-bottom: 20px;
+}
+
+.footer-section h4 {
+    border-bottom: 2px solid #fff;
+    padding-bottom: 5px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 20;
+}
+
+footer ul li {
+    margin-bottom: 5px;
+}
+.newsletter {
+    flex: 1 1 calc(25% - 20px); /* Ajustar el 20px para el margen entre secciones */
+}
+footer ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+footer ul li a:hover {
+
+    color: black;
+}
+
+footer .newsletter form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+footer .newsletter input[type="email"] {
+    margin-top: 5px;
+    padding: 8px;
+}
+
+footer .newsletter button {
+    margin-top: 5px;
+    background-color: #fff;
+    color: #000000;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+}
+
+footer .newsletter button:hover {
+    color: #000000;
+    background-color: #ffffff;
+}
+
+.copyright {
+    margin-top: 300px;
+    text-align: center;
+    margin-top: 20px;
+    color: #ccc;
+    z-index: 1;
+}
+/* Estilos responsivos para móviles y pantallas pequeñas */
+@media (max-width: 858px) {
+    .checkbtn {
+        display: block;
+    }
+
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        margin-left: 0;
+        text-align: center;
+        transition: all 0.5s;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 25px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    li a:hover,
+    li a.active {
+        background: none;
+        color: red;
+    }
+
+    #check:checked ~ ul {
+        left: 0;
+    }
+}
+
+@media (min-width: 1200px) {
+    /* Estilos para pantallas grandes (más de 1200px) */
+    .container__slider {
+        margin-left: 425px;
+    }
+
+    .traducir {
+        margin-left: 100px;
+    }
+
+    .logo {
+
+        margin-left: 370px;
+    }
+
+    input[type="radio"] {
+        display: none;
+    }
+
+    #traducir {
+        margin-left: 300px;
+    }
+
+    footer .container {
+        margin: 0 30px;
+        width: calc(100% - 60px);
+        padding: 10px;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1200px) {
+    /* Estilos para pantallas medianas (entre 600px y 1200px) */
+    .container__slider {
+        margin-left: 200px;
+    }
+
+    .traducir {
+        margin-left: 50px;
+    }
+
+    .logo {
+
+        margin-left: 180px;
+    }
+
+    input[type="radio"] {
+        display: none;
+    }
+
+    #traducir {
+        margin-left: 150px;
+    }
+
+    footer .container {
+        margin: 0 20px;
+        width: calc(100% - 40px);
+        padding: 10px;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 600px) {
+    /* Estilos para pantallas pequeñas (menos de 600px) */
+
+    .container__slider {
+        margin-left: 50px;
+    }
+
+    .traducir {
+        margin-left: 20px;
+    }
+
+    .logo {
+        display: none;
+        margin-left: 20px;
+    }
+
+    input[type="radio"] {
+        display: none;
+    }
+
+    #traducir {
+        margin-left: 75px;
+    }
+    .account-link{
+        margin-left: 20px;
+    }
+    .fas fa-desktop{
+        margin-left: 20px;
+    }
+    .fas fa-shopping-cart{
+        margin-left: 20px;
+    }
+    .fas fa-tshirt{
+        margin-left: 20px;
+    }
+    .fas fa-sign-out-alt{
+        margin-left: 20px;
+    }
+
+    footer .container {
+        margin: 0 10px;
+        width: calc(100% - 20px);
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
